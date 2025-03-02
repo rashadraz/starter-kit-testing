@@ -38,3 +38,24 @@ export interface User {
     updated_at: string;
     [key: string]: unknown; // This allows for additional properties...
 }
+
+
+export interface Submenu {
+    href: string;
+    label: string;
+    active?: boolean;
+    icon: LucideIcon;
+  }
+  
+  export interface MenuItem {
+    href: string;
+    label: string;
+    icon: LucideIcon;
+    active: boolean;
+    submenus: Submenu[];
+  }
+  
+  export interface MenuGroup {
+    groupLabel?: string;
+    menus: MenuItem[];
+  }
