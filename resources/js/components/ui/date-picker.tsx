@@ -19,6 +19,7 @@ interface DatePickerProps {
     endYear?: number;
     date?: Date;
     onChange?: (date: Date) => void;
+    label?: string;
   }
   
 export function DatePicker({
@@ -26,6 +27,7 @@ export function DatePicker({
   endYear = getYear(new Date()) + 100,
   date,
   onChange,
+  label = "Select a date",
 }: DatePickerProps) {
 
 //   const [date, setDate] = React.useState<Date>(new Date());
@@ -49,21 +51,7 @@ export function DatePicker({
     (_, i) => startYear + i
   );
 
-//   const handleMonthChange = (month: string) => {
-//     const newDate = setMonth(date, months.indexOf(month));
-//     setDate(newDate);
-//   }
 
-//   const handleYearChange = (year: string) => {
-//     const newDate = setYear(date, parseInt(year));
-//     setDate(newDate)
-//   }
-
-//   const handleSelect = (selectedData: Date | undefined) => {
-//     if (selectedData) {
-//       setDate(selectedData)
-//     }
-//   }
 const handleMonthChange = (month: string) => {
     if (date && onChange) {
       const newDate = setMonth(date, months.indexOf(month));
@@ -85,6 +73,8 @@ const handleMonthChange = (month: string) => {
   }
 
   return (
+    <div className="flex flex-col space-y-2">
+      <label className="text-sm font-medium text-gray-700">{label}</label>
     <Popover>
       <PopoverTrigger asChild>
         <Button
@@ -138,5 +128,6 @@ const handleMonthChange = (month: string) => {
         />
       </PopoverContent>
     </Popover>
+    </div>
   )
 }
