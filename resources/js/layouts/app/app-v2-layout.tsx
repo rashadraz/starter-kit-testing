@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils';
 import { useStore } from '@/hooks/use-store';
 import { useSidebarToggle } from '@/hooks/use-sidebar-toggle';
 import { ReactNode } from 'react';
-import { Footer } from '../footer/footer';
+import { Footer } from '@/components/layout/footer';
 import { Sidebar } from '@/components/layout/sidebar';
 
 interface AdminPanelLayoutProps {

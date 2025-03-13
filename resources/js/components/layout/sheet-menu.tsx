@@ -1,4 +1,4 @@
-import {  MenuIcon, PanelsTopLeft } from 'lucide-react';
+import {  Handshake, MenuIcon } from 'lucide-react';
 
 import { Button } from '@/components/ui/button';
 import { Menu } from '@/components/layout/menu';
@@ -17,8 +17,8 @@ export function SheetMenu() {
         <SheetHeader>
           <Button className="flex justify-center items-center pb-2 pt-1" variant="link" asChild>
             <Link href="/dashboard" className="flex items-center gap-2">
-              <PanelsTopLeft className="w-6 h-6 mr-1" />
-              <h1 className="font-bold text-lg">Rashad</h1>
+              <Handshake className="w-6 h-6 mr-1" />
+              <h1 className="font-bold text-lg">Leajlak Partner Portal</h1>
             </Link>
           </Button>
         </SheetHeader>
